@@ -30,7 +30,7 @@ watch:
 	$(PKG) watch
 
 run:
-	$(PKG) run
+	$(PKG) run-local
 
 build:
 	$(PKG) build
