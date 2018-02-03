@@ -10,14 +10,14 @@ This mini-project is to shows up my knowledge with hype frameworks, libraries, R
 _soon_
 
 ## Install
-_soon_
+- To install things and dependencies: `make install`, simply do it!
 
 ## Run
 - To build the project, just `make build`;
 - To watch for updates on the project, just `make watch`;
 - To have the project clean (clear build folder), just run `make clean`;
 - To clear build folder, install things AND build the project, run this **MAGIC** command: `make start`
-- If you have any help with Makefile's **make** commands, please do: `make help`
+- If you have any **help** with Makefile's **make** commands, please do: `make help`
 
 **You feeling tired to do those run tasks?**
 Just access [here](https://your-box-by-guicheffer.herokuapp.com/): https://your-box-by-guicheffer.herokuapp.com/**

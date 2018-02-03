@@ -1,0 +1,89 @@
+{
+  "private": true,
+  "license": "UNLICENSED",
+  "name": "your-box",
+  "description": "🎁  A simple React app which shows up gift boxes from all over the world",
+  "version": "0.1.0",
+  "author": "João Guilherme <hi@guicheffer.me>",
+  "homepage": "https://github.com/guicheffer/your-box#readme",
+  "config": {
+    "server": "./server.js",
+    "stylintrc": ".stylintrc",
+    "outputPath": "app/"
+  },
+  "scripts": {
+    "preinstall": "echo \"Make sure node ~8.6.0 and yarn ~1.1.0 are being used!\"",
+    "clean-files": "rm -rf app/",
+    "deploy": "echo \"deploy it, bitch!\"",
+    "run": "node $npm_package_config_server",
+    "tests": "echo \"Please add the needed e2e/unit tests\"",
+    "start": "make clean && make watch",
+    "watch": "webpack --watch --env.dev",
+    "build": "webpack --progress --env.dev",
+    "build:prod": "webpack --progress --env.prod"
+  },
+  "main": "$npm_package_config_base",
+  "engines": {
+    "node": "~8.6.0",
+    "yarn": "~1.1.0"
+  },
+  "devDependencies": {
+    "copy-webpack-plugin": "^4.0.1",
+    "express": "~4.16.2",
+    "path": "^0.12.7",
+    "watch": "^1.0.2",
+    "yarn": "~1.1.0"
+  },
+  "dependencies": {
+    "autoprefixer": "^7.1.2",
+    "babel-core": "^6.25.0",
+    "babel-loader": "^7.1.1",
+    "babel-preset-es2015": "^6.22.0",
+    "babel-preset-es2017": "^6.24.1",
+    "babel-preset-react": "^6.11.1",
+    "css-tree": "^1.0.0-alpha19",
+    "cssnano": "^3.10.0",
+    "diacritics": "^1.3.0",
+    "es2015": "^0.0.0",
+    "eslint": "^4.2.0",
+    "eslint-config-airbnb-base": "^12.0.2",
+    "eslint-loader": "^1.9.0",
+    "eslint-plugin-import": "^2.7.0",
+    "extract-text-webpack-plugin": "^3.0.1",
+    "glob": "^7.1.2",
+    "html-minifier": "^3.5.2",
+    "js-cookie": "^2.1.4",
+    "loader-utils": "~1.1.0",
+    "lodash": "^4.17.4",
+    "node-sass": "^4.5.3",
+    "postcss-loader": "^2.0.6",
+    "raw-loader": "^0.5.1",
+    "react": "16.0.0",
+    "react-dom": "^16.0.0",
+    "react-redux": "^5.0.6",
+    "react-router": "^4.2.0",
+    "react-router-redux": "^4.0.5",
+    "redux": "^3.5.2",
+    "redux-promise": "^0.5.3",
+    "stylint": "^1.5.9",
+    "stylint-loader": "^1.0.0",
+    "stylint-stylish": "^1.4.0",
+    "stylus": "^0.54.5",
+    "stylus-loader": "^3.0.1",
+    "ua-parser-js": "^0.7.14",
+    "uglifyjs-webpack-plugin": "^1.0.0-beta.3",
+    "webpack": "~3.6.0"
+  },
+  "keywords": [
+    "webpack",
+    "webpack3",
+    "react",
+    "redux",
+    "karma",
+    "stylus"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/guicheffer/your-box/"
+  }
+}

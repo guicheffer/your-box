@@ -48,22 +48,22 @@ module.exports = function(env = {}) {
       {
         context: path.resolve(__dirname, 'src/app/styleguide/fonts'),
         from: '**/*',
-        to: path.resolve(__dirname, outputPath, 'app/fonts'),
+        to: path.resolve(__dirname, outputPath, '/fonts'),
       },
       {
         context: path.resolve(__dirname, 'src/app'),
         from: '**/*.+(jpg|png)',
-        to: path.resolve(__dirname, outputPath, 'app/img/'),
+        to: path.resolve(__dirname, outputPath, '/img/'),
       },
       {
         context: path.resolve(__dirname, 'src/app'),
         from: '**/*.svg',
-        to: path.resolve(__dirname, outputPath, 'app/svg/'),
+        to: path.resolve(__dirname, outputPath, '/svg/'),
       },
       {
         context: path.resolve(__dirname, 'src/app/'),
         from: '**/*.html',
-        to: path.resolve(__dirname, outputPath, 'app/'),
+        to: path.resolve(__dirname, outputPath, '/'),
       },
     ]),
     watch : new WatchPlugin({
@@ -86,7 +86,7 @@ module.exports = function(env = {}) {
 
     output: {
       filename: '[name].js',
-      path: path.resolve(__dirname, outputPath, 'app/js'),
+      path: path.resolve(__dirname, outputPath, '/js'),
     },
 
     resolve: {
