@@ -27,7 +27,7 @@ font-face-bold()
 body {
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
-  background: $white-base;
+  background: $gray-cod;
   color: $black-base;
   line-height: $font-size-base + $spacing-xsmall;
 }
@@ -47,5 +47,17 @@ body, input, a {
   &__home {
     home();
     home-responsive();
+  }
+
+  &__footer {
+    background: $black-base;
+    bottom: 0;
+    color: $white-base;
+    padding: $spacing-xxsmall;
+    position: absolute;
+    text-align: right;
+    width: 100%;
+
+    a { color: $blue-action; }
   }
 }

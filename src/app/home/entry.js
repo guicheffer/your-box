@@ -5,11 +5,13 @@
  *
 -*/
 
+import React from 'react'
+
 import AbstractEntry from '../core/entry'
 
 class HomeEntry extends AbstractEntry {
   start ({ initilizationData }) {
-    console.log(this.eventBus.x + this.eventBus.y, initilizationData)
+    this.renderItems
   }
 }
 

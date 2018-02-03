@@ -1,20 +1,182 @@
-/*- ⭐️ Base Style
+/*- ⭐️ Home Style
  *
  *
-
-
 -*/
 
 @import '../styleguide/palette';
 @import '../styleguide/typography';
 
+// Box
+_box() {
+  &--info {
+    color: $white-base;
+    padding: $spacing-base;
+
+    .info {
+      &__remove-item {
+        border-radius: 100%;
+        border: 1px solid $black-base;
+        color: $black-base;
+        font-size: $spacing-small;
+        font-weight: 700;
+        line-height: $spacing-xxsmall;
+        padding: $spacing-small;
+        position: absolute;
+        right: $spacing-xsmall;
+        text-transform: uppercase;
+        top: $spacing-xsmall;
+        transition: opacity .2s ease-in-out;
+      }
+
+      &__title a {
+        color: $white-base;
+        font-size: $font-size-large;
+      }
+
+      &__price,
+      &__go-to { text-align: right; }
+
+      &__go-to {
+        color: $white-base;
+        display: block;
+        font-weight: $font-weight-bold;
+        margin: $spacing-small 0 0;
+        text-transform: uppercase;
+
+        &:hover { text-decoration: underline; }
+      }
+    }
+  }
+
+  .box {
+    &__img {
+      &--itself {
+        $size = 200px;
+
+        background-color: $white-base;
+        background-position: 50% 50%;
+        background-repeat: no-repeat;
+        background-size: 70%;
+        height: $size;
+        width: auto;
+      }
+    }
+  }
+}
+
+_box-responsive() {
+  &:hover .info__remove-item { opacity: 1}
+
+  +mq-medium-up() {
+    &--info {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+
+      .info {
+        &__remove-item {
+          border: 1px solid $white-base;
+          color: $white-base;
+          padding: $spacing-xsmall;
+          opacity: 0;
+
+          &:hover { background: $black-base; }
+        }
+
+        &__price,
+        &__go-to { text-align: left; }
+      }
+    }
+
+    .box {
+      &__img {
+        &--itself {
+          $size = 210px;
+
+          width: $size;
+        }
+      }
+    }
+  }
+
+  +mq-large-up() {
+    max-width: 750px;
+
+    .box {
+      &__img {
+        &--itself {
+          $size = 360px;
+
+          width: $size;
+        }
+      }
+    }
+  }
+}
+
+// List
+_list() {
+  &__title { font-size: $font-size-large; }
+
+  &__actions {
+    button {
+      background: $white-base;
+      border: 1px solid;
+    }
+  }
+
+  &__boxes {
+    display: flex;
+    flex-direction: column;
+    margin: $spacing-large 0;
+  }
+
+  &__box {
+    border-radius: $spacing-base;
+    border: 1px solid $black-base;
+    box-shadow: $spacing-xxsmall $spacing-xxsmall $spacing-xxsmall $black-base;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    margin: $spacing-small 0;
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+
+    _box()
+
+    &:first-child { margin-top: 0; }
+
+    // Just a easter egg 😜
+    &:nth-child(odd) { background-color: $red-base; }
+    &:nth-child(even) { background-color: $blue-base; }
+
+  }
+}
+
+_list-responsive() {
+  &__box {
+    _box-responsive()
+  }
+
+  +mq-medium-up() {
+    &__box { flex-direction: row; }
+  }
+
+  +mq-large-up() {
+    &__boxes { align-items: center; }
+  }
+}
+
+// Home
 home() {
-  .home {
-    &__list { background: yellow; }
+  .list {
+    _list()
   }
 }
 
 home-responsive() {
-  +mq-medium-up() {}
-  +mq-large-up() {}
+  .list {
+    _list-responsive()
+  }
 }

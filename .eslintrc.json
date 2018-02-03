@@ -3,7 +3,7 @@
   "plugins": ["import"],
   "extends": ["airbnb-base"],
   "rules": {
-    "class-methods-use-this": ["error", { "exceptMethods": ["start", "setup"] }],
+    "class-methods-use-this": ["off"],
     "complexity": ["error", 7],
     "func-names": ["error", "never"],
     "no-underscore-dangle": ["off"],
