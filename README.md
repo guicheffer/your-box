@@ -1,5 +1,5 @@
 # your box
-> Code test in react+webpack+html+js+stylus+bla+bla+bla
+> Code test in react+webpack+html+js+stylus+bla+bla+bla for smartbox
 
 ## Introduction
 This mini-project is to shows up my knowledge with hype frameworks, libraries, React data treatment, styles, javascript, modern bundles and etc.
@@ -32,7 +32,7 @@ If you want to deploy this project on your Heroku account, simply click on the b
 ### EE2 tests
 This project contains _End to End_ tests that are used to test basic components visibilities. It wasn't implemented in any CI such the Heroku/CircleCI BUT it runs perfectly what you want to be tested with the command `make test` after having a _Chromedriver_ running on your host (instructions below). Project structure today looks like:
 ```
-bbright-playground/
+your-box-by-guicheffer/
 |       |- (...)
 |       |- tests/
 |            |- e2e/
