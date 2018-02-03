@@ -66,12 +66,12 @@ Some of the technologies stack was handpicked because of preference in working w
 Check below some of the tools and tech stack with their screenshots on it too!
 
 - I used [Atom](https://atom.io/) for the editor.
-	![inception](https://user-images.githubusercontent.com/5280832/35592409-0e278d2c-05f4-11e8-880c-594899d212a5.png)
+	![inception](https://user-images.githubusercontent.com/5280832/35763090-66240868-088b-11e8-8eb8-7b7c67ba4b3f.png)
 
 	~~what a inception thing~~
 
 - I used a [Kanban board](https://github.com/guicheffer/your-box/projects/3?fullscreen=true) for the project management at all, _GitHub Project Board_ was the one. You can check right here how my Kanban worked in details: https://github.com/guicheffer/your-box/projects/3?fullscreen=true
-![kanban thing](https://user-images.githubusercontent.com/5280832/35592580-9cd1ea40-05f4-11e8-9830-d98547d25cf7.png)
+![kanban thing](https://user-images.githubusercontent.com/5280832/35763093-832b9e08-088b-11e8-8872-c93739f44285.png)
 - I chose [Webpack](https://webpack.js.org/) for bundling this project assets once I had to do 3 different exercises inside only one repo (better to read and review). Actually many advantages were included on this decision!
 - I chose [React](https://reactjs.org/) because I'm familiar with and its the most fast way to begin it from zero.
 

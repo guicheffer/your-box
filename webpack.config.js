@@ -90,10 +90,11 @@ module.exports = function(env = {}) {
     },
 
     resolve: {
-      modules: ['node_modules'],
       alias: {
         underscore: 'lodash/lodash',
       },
+      extensions: ['.js', '.jsx', '.styl'],
+      modules: ['node_modules'],
     },
 
     module: {
@@ -105,20 +106,20 @@ module.exports = function(env = {}) {
           }),
         },
         {
-          test: /\.js$/,
+          test: /(\.js|\.jsx)$/,
           exclude: /node_modules/,
           include: path.resolve(__dirname, 'src/app'),
           enforce: 'pre',
           loader: 'eslint-loader',
         },
         {
-          test: /\.js$/,
+          test: /(\.js|\.jsx)$/,
           exclude: /node_modules/,
           include: path.resolve(__dirname, 'src/app'),
           use: [{
             loader: 'babel-loader',
             options: {
-              presets: ['es2015', 'es2017'],
+              presets: ['es2015', 'react'],
             },
           }],
         },

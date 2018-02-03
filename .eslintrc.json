@@ -1,7 +1,16 @@
 {
   "root": true,
-  "plugins": ["import"],
+  "plugins": [
+    "import",
+    "react"
+  ],
   "extends": ["airbnb-base"],
+  "parserOptions": {
+    "ecmaFeatures": {
+      "jsx": true,
+      "modules": true
+    }
+  },
   "rules": {
     "class-methods-use-this": ["off"],
     "complexity": ["error", 7],
@@ -10,8 +19,13 @@
     "no-unexpected-multiline": "error",
     "no-unused-expressions": ["warn"],
     "no-unused-vars": ["error", { "argsIgnorePattern" : "_" }],
+    "no-tabs": ["off"],
+    "object-shorthand": ["off"],
+    "no-mixed-spaces-and-tabs": ["off"],
     "semi": ["error", "never"],
     "space-before-function-paren": ["error", "always"],
-    "spaced-comment": ["off"]
+    "spaced-comment": ["off"],
+    "react/jsx-uses-react": "error",
+    "react/jsx-uses-vars": "error"
   }
 }
