@@ -8,7 +8,11 @@
 -*/
 
 const abstractMediator = {
-  x: 4,
+  initialize (view = {}) {
+    this.view = view
+
+    return this
+  },
 }
 
 export default abstractMediator

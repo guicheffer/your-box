@@ -30,29 +30,7 @@ If you want to deploy this project on your Heroku account, simply click on the b
 ## Testing
 
 ### EE2 tests
-This project contains _End to End_ tests that are used to test basic components visibilities. It wasn't implemented in any CI such the Heroku/CircleCI BUT it runs perfectly what you want to be tested with the command `make test` after having a _Chromedriver_ running on your host (instructions below). Project structure today looks like:
-```
-your-box-by-guicheffer/
-|       |- (...)
-|       |- tests/
-|            |- e2e/
-|            |   |- reports/
-|            |   |- screenshots/
-|            |   |- specs
-|            |   |    |- components
-|            |   |    |      |- list.js
-|            |   |- nightwatch.conf.js
-|       |- (...)
-```
-
-
-As mentioned before, this tests were based on _Chromedriver_ and _Headless Chrome_, which means that now they are dependencies, fortunately the _Chromedriver_ can be installed via `yarn` and it is already into the project, although chrome has to be installed according to your Operating System:
-   - **OSX:** install [Chrome Canary](https://www.google.com/chrome/browser/canary.html?platform=mac)
-   - **Linux:** install the latest version of [Chrome](https://www.google.com/chrome/browser/desktop/index.html) or [Chromium](https://www.chromium.org/getting-involved/download-chromium)
-
-Once you've installed it, you should just:
-- run _Chromedriver_ server via the command: `make run-chrome`
-- run the tests (components): `make test`
+I ran out of time and didn't add any e2e unfortunately 😔
 
 **obs**. _you don't need the `watch` command on the project to be running the tests locally!_
 
@@ -60,6 +38,9 @@ Once you've installed it, you should just:
 Unfortunately saw no ~~advantages on~~ useful unit tests for this project.
 
 ## 👨🏻‍💻 Development process
+
+### Considerations
+This application should show up the possibility of working with any framework, using the concept of elements mediator, where you can add any event into any component anytime you want to.
 
 ### Technologies
 Some of the technologies stack was handpicked because of preference in working with!

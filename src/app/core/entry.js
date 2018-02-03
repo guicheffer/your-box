@@ -18,7 +18,7 @@ class AbstractEntry {
 
   _setup ({ initilizationData }) {
     this.eventBus = mediator
-    this.start({ initilizationData })
+    this.start({ eventBus: this.eventBus, initilizationData })
   }
 
   start () { throw Error('Missing start implementation.') }

@@ -17,10 +17,13 @@ _box() {
   margin: $spacing-small 0;
   overflow: hidden;
   position: relative;
-  transition: top .5s ease-out, opacity .5s ease-out;
+  transition: background .5s ease-out, top .5s ease-out, opacity .5s ease-out;
   width: 100%;
 
-  &[data-removed] { opacity: 0; }
+  &[data-removed] {
+    opacity: 0;
+    pointer-events: none;
+  }
 
   &:first-child { margin-top: 0; }
 
@@ -167,6 +170,12 @@ _list() {
     margin: $spacing-small 0 0;
     position: relative;
     width: $size;
+  }
+
+  &__itself {
+    transition: opacity .5s ease-in-out;
+
+    &[data-loading] { opacity: 0.3; }
   }
 
   &__boxes {
