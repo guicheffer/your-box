@@ -20,7 +20,7 @@ _soon_
 - If you have any **help** with Makefile's **make** commands, please do: `make help`
 
 **You feeling tired to do those run tasks?**
-Just access [here](https://your-box-by-guicheffer.herokuapp.com/): https://your-box-by-guicheffer.herokuapp.com/**
+Just access [here](http://your-box-by-guicheffer.herokuapp.com/): http://your-box-by-guicheffer.herokuapp.com/**
 ⬆️ &nbsp; This project was deployed on [Heroku](https://dashboard.heroku.com/) 🙂
 
 If you want to deploy this project on your Heroku account, simply click on the button below:
