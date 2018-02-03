@@ -7,18 +7,17 @@
   "author": "João Guilherme <hi@guicheffer.me>",
   "homepage": "https://github.com/guicheffer/your-box#readme",
   "config": {
-    "server": "./server.js",
+    "server": "server.js",
     "stylintrc": ".stylintrc",
     "outputPath": "app/"
   },
   "scripts": {
-    "heroku-prebuild": "npm i && npm build && make deploy",
     "preinstall": "echo \"Make sure node ~8.6.0 and yarn ~1.1.0 are being used!\"",
     "clean-files": "rm -rf app/",
     "deploy": "echo \"deploy it, bitch!\" && make run",
     "run-local": "node $npm_package_config_server",
     "tests": "echo \"Please add the needed e2e/unit tests\"",
-    "start": "make clean && make build-prod",
+    "start": "make clean && make install && make build-prod && make deploy",
     "watch": "webpack --watch --env.dev",
     "build": "webpack --progress --env.dev",
     "build:prod": "webpack --progress --env.prod"
