@@ -7,7 +7,7 @@ This mini-project is to shows up my knowledge with hype frameworks, libraries, R
 ![image](https://user-images.githubusercontent.com/5280832/35598504-f25b835c-060a-11e8-9467-270f3b549442.png)
 
 **Preview**:
-_soon_
+![image](https://user-images.githubusercontent.com/5280832/35772242-926ed984-0921-11e8-9d65-2561930e88af.png)
 
 ## Install
 - To install things and dependencies: `make install`, simply do it!
@@ -26,16 +26,6 @@ Just access [here](http://your-box-by-guicheffer.herokuapp.com/): http://your-bo
 If you want to deploy this project on your Heroku account, simply click on the button below:
 
 [![Deploy](https://www.herokucdn.com/deploy/button.png)](https://heroku.com/deploy)
-
-## Testing
-
-### EE2 tests
-I ran out of time and didn't add any e2e unfortunately 😔
-
-**obs**. _you don't need the `watch` command on the project to be running the tests locally!_
-
-### Unit tests
-Unfortunately saw no ~~advantages on~~ useful unit tests for this project.
 
 ## 👨🏻‍💻 Development process
 
@@ -67,6 +57,16 @@ Check below some of the tools and tech stack with their screenshots on it too!
 - Usage of Mobile First designing and development;
 - To Study in general;
 - Usage of emojis ❤️ &nbsp; (I really **LOVE** this thingy);
+
+## Testing
+
+### EE2 tests
+I ran out of time and didn't add any e2e unfortunately 😔
+
+**obs**. _you don't need the `watch` command on the project to be running the tests locally!_
+
+### Unit tests
+Unfortunately saw no ~~advantages on~~ useful unit tests for this project.
 
 ## TO DO
 [Kanban Backlog](https://github.com/guicheffer/your-box/projects/3#column-2128623) The `To Do` column you can check here:
