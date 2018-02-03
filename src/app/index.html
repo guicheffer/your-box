@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<meta name="mobile-web-app-capable" content="yes">
+
+	<meta name="author" content="@guicheffer">
+	<meta name="description" content="🎁  A simple React app which shows up gift boxes from all over the world">
+
+	<title>Your box by @guicheffer - Smartbox Challenge</title>
+
+	<link rel="stylesheet" href="./css/setup.css">
+
+	<script>
+    function getInitializationData () {
+      return {
+        hello: 'world',
+      }
+    }
+
+	  function setupApp (options) {
+			options.before()
+
+			var app = new window.App.HomeEntry({
+        initilizationData: getInitializationData()
+      })
+	  }
+	</script>
+</head>
+<body>
+	<div class="your-box__container">
+		<section class="your-box__home" id="app-your-box-home">
+      <div class="home__list">
+        your box challenge home
+      </div>
+		</section>
+	</div>
+
+	<script async src="./js/setup.js"></script>
+</body>
+</html>

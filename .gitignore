@@ -1,5 +1,8 @@
-build/
+# Local things
+/app/
+/.yarnclean
+
+# External
 node_modules/
 .DS_Store
 yarn-error.log
-.yarnclean

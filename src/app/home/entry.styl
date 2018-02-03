@@ -1,0 +1,20 @@
+/*- ⭐️ Base Style
+ *
+ *
+
+
+-*/
+
+@import '../styleguide/palette';
+@import '../styleguide/typography';
+
+home() {
+  .home {
+    &__list { background: yellow; }
+  }
+}
+
+home-responsive() {
+  +mq-medium-up() {}
+  +mq-large-up() {}
+}
