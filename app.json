@@ -1,0 +1,7 @@
+{
+  "name": "YourBox.com",
+  "description": "This if your box 🤘",
+  "repository": "https://github.com/guicheffer/your-box",
+  "logo": "http://www.smartbox.com/landing_page/images/favicon.ico",
+  "keywords": ["webpack", "react", "node", "express", "heroku"]
+}
