@@ -12,17 +12,17 @@
     "outputPath": "app/"
   },
   "scripts": {
+    "heroku-prebuild": "npm i && npm build && make deploy",
     "preinstall": "echo \"Make sure node ~8.6.0 and yarn ~1.1.0 are being used!\"",
     "clean-files": "rm -rf app/",
-    "deploy": "echo \"deploy it, bitch!\"",
+    "deploy": "echo \"deploy it, bitch!\" && make run",
     "run-local": "node $npm_package_config_server",
     "tests": "echo \"Please add the needed e2e/unit tests\"",
-    "start": "make clean && make watch",
+    "start": "make clean && make build-prod",
     "watch": "webpack --watch --env.dev",
     "build": "webpack --progress --env.dev",
     "build:prod": "webpack --progress --env.prod"
   },
-  "main": "$npm_package_config_base",
   "engines": {
     "node": "~8.6.0",
     "yarn": "~1.1.0"
