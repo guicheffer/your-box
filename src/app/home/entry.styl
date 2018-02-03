@@ -8,6 +8,26 @@
 
 // Box
 _box() {
+  border-radius: $spacing-base;
+  border: 1px solid $black-base;
+  box-shadow: $spacing-xxsmall $spacing-xxsmall $spacing-xxsmall $black-base;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  margin: $spacing-small 0;
+  overflow: hidden;
+  position: relative;
+  transition: top .5s ease-out, opacity .5s ease-out;
+  width: 100%;
+
+  &[data-removed] { opacity: 0; }
+
+  &:first-child { margin-top: 0; }
+
+  // Just a easter egg 😜
+  &:nth-child(odd) { background-color: $red-base; }
+  &:nth-child(even) { background-color: $blue-base; }
+
   &--info {
     color: $white-base;
     padding: $spacing-base;
@@ -31,10 +51,19 @@ _box() {
       &__title a {
         color: $white-base;
         font-size: $font-size-large;
+
+        &:hover { text-decoration: underline; }
       }
+
+      &__subtitle { font-size: $font-size-small; }
 
       &__price,
       &__go-to { text-align: right; }
+
+      &__price {
+        font-size: $font-size-large;
+        font-weight: $font-weight-bold;
+      }
 
       &__go-to {
         color: $white-base;
@@ -42,8 +71,6 @@ _box() {
         font-weight: $font-weight-bold;
         margin: $spacing-small 0 0;
         text-transform: uppercase;
-
-        &:hover { text-decoration: underline; }
       }
     }
   }
@@ -65,9 +92,12 @@ _box() {
 }
 
 _box-responsive() {
-  &:hover .info__remove-item { opacity: 1}
+  &:hover .info__remove-item { opacity: 1; }
+  &:hover .info__go-to span { text-decoration: underline; }
 
   +mq-medium-up() {
+    flex-direction: row;
+
     &--info {
       display: flex;
       flex-direction: column;
@@ -77,8 +107,9 @@ _box-responsive() {
         &__remove-item {
           border: 1px solid $white-base;
           color: $white-base;
-          padding: $spacing-xsmall;
           opacity: 0;
+          padding: $spacing-xsmall;
+          transition: background .2s ease-in-out, opacity .2s ease-in-out;
 
           &:hover { background: $black-base; }
         }
@@ -119,38 +150,34 @@ _list() {
   &__title { font-size: $font-size-large; }
 
   &__actions {
+    text-align: center;
+
     button {
       background: $white-base;
       border: 1px solid;
     }
   }
 
+  &__sort {
+    $size = 100px;
+
+    background: $gray-base;
+    color: $black-base;
+    font-weight: $font-weight-bold;
+    margin: $spacing-small 0 0;
+    position: relative;
+    width: $size;
+  }
+
   &__boxes {
     display: flex;
     flex-direction: column;
     margin: $spacing-large 0;
+    padding-bottom: $spacing-large;
   }
 
   &__box {
-    border-radius: $spacing-base;
-    border: 1px solid $black-base;
-    box-shadow: $spacing-xxsmall $spacing-xxsmall $spacing-xxsmall $black-base;
-    cursor: pointer;
-    display: flex;
-    flex-direction: column;
-    margin: $spacing-small 0;
-    overflow: hidden;
-    position: relative;
-    width: 100%;
-
     _box()
-
-    &:first-child { margin-top: 0; }
-
-    // Just a easter egg 😜
-    &:nth-child(odd) { background-color: $red-base; }
-    &:nth-child(even) { background-color: $blue-base; }
-
   }
 }
 
@@ -159,12 +186,11 @@ _list-responsive() {
     _box-responsive()
   }
 
-  +mq-medium-up() {
-    &__box { flex-direction: row; }
-  }
-
   +mq-large-up() {
-    &__boxes { align-items: center; }
+    &__boxes {
+      align-items: center;
+      user-select: none;
+    }
   }
 }
 
