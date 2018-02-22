@@ -1,7 +1,7 @@
 /*-
  * ⭐️ HomeEntry
  *
- * This is the home entry file for star wars code challenge.
+ * This is the home entry file for your box challenge.
  *
 -*/
 
